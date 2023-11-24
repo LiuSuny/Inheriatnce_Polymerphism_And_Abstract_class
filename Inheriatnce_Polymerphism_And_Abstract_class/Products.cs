@@ -9,24 +9,24 @@ namespace Inheriatnce_Polymerphism_And_Abstract_class
 {
     public abstract class Products
     {
-        protected  string Name { get; }
+        protected  string name { get; set; }
         protected string Description { get; }
         protected double Price { get; set; }
-       
 
-        //public string Name //call method property
-        //{
-        //    get { return name; }
-        //    set
-        //    {
-        //        if (value.Any(char.IsDigit))
-        //        {
-        //            Name = "No Name";
-        //            Console.WriteLine("Can't use numbers in name");
-        //        }
-        //        Name = value;
-        //    }
-        //}
+
+        public string Name //call method property
+        {
+            get { return name; }
+            set
+            {
+                if (value.Any(char.IsDigit))
+                {
+                    Name = "No Name";
+                    Console.WriteLine("Can't use numbers in name");
+                }
+                name = value;
+            }
+        }
         public Products(string _name, string _description, double _price)
         {
             Name = _name;
